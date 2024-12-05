@@ -11,7 +11,8 @@ app.use(helmet());
 app.use(compression());
 
 // init db
-
+require("./dbs/init.mongodb");
+require("./helpers/check.connect").checkOverLoad();
 // init routes
 app.get("/", (req, res, next) => {
   const strCompress = "Hello JS";
