@@ -3,7 +3,7 @@ const {
   app: { port },
 } = require("./src/configs/config.mongodb");
 
-const server = app.listen(3055, () => {
+const server = app.listen(port, () => {
   console.log(`WSV eCommerce start with port ${port}`);
 });
 
